@@ -1,6 +1,5 @@
-#### CS 1XA3 Project01 - ***<paarthas>***
+#### CS 1XA3 Project01 - <paarthas>
 
-**EMOJI Reference :** https://www.webfx.com/tools/emoji-cheat-sheet/
 ## Usage
    Execute this script from project root with:
 chmod +x CS1XA3/Project01/project_analyze.sh ./CS1XA3/Project01/project_analyze.sh
@@ -47,4 +46,4 @@ It is advisable to create files with a specific extension and then to test this 
 2. It asks for an extension, from the user and finds all the files with that extension in the repo.
 3. It copies the files found to the user created directory.
 
-# EMOJI Reference : https://www.webfx.com/tools/emoji-cheat-sheet/ 
+**EMOJI Reference :** https://www.webfx.com/tools/emoji-cheat-sheet/ 

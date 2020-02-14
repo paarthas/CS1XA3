@@ -1,4 +1,4 @@
-#### CS 1XA3 Project01 - <paarthas>
+#### CS 1XA3 Project01 - ***paarthas***
 
 ## Usage
    Execute this script from project root with:
@@ -27,20 +27,20 @@ instructions to do so. Inspite of that hold, it works perfectly for any test cas
 feature, files can be created and the feature can be executed as stated.
 - **Reference:** Learnt the `awk` command from https://stackoverflow.com/questions/16374616/cutting-the-column-including-size/ `grep -v '^d'` command from https://askubuntu.com/questions/811210/how-can-i-make-ls-only-display-files
 
-## Feature 04 :star:
+## Feature 04 :
 - **Description:** This feature is an interactive feature as well. So, this basically takes in an input from the user which is an extension of a file and checks the number of files that are present in the directory ***CS1XA3*** and its
 respective **subdirectories** as well. This feature seems to be working for most of my test cases.
 - **Execution:** This feature can be executed my typing in ""4"" when the computer asks for an input. Then as the feature asks for an input, the desired extension must be entered and the feature is ready to go.
 It is advisable to create files with a specific extension and then to test this feature for better testing.
 - **Reference:** *NO REFERENCE*
 
-## Custom Feature 01 :fire:
+## Custom Feature 01 :
 - **Description:**
 1. This feature prompts the user for an input(ie.any word) and checks if it is in any of the files in the repo.
 2. If it exists in any of the file, it removes all the lines that has the user prompt word in it.
 3. If such a file does not exist, it ends up creating a file in the current directory with the reversed user promt word as its file name.
 
-## Custom Feature 02 :fire:
+## Custom Feature 02 :
 - **Desription:**
 1. This feature asks the user for a directory name and creates a new directory in that specified name.
 2. It asks for an extension, from the user and finds all the files with that extension in the repo.

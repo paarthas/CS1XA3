@@ -28,4 +28,4 @@ https://codepen.io/mariosmaselli/pen/CDcmb
 **Description:** This feature is basically used to give a better look for the website. This displays a typing effect animation on the bottom right side of the website. 
 **Reference** https://webdevtrick.com/javascript-typing-effect/
 
-
+**IMPORTED THE JQUERY LIBRARY FROM** https://code.jquery.com/jquery-3.4.1.min.js

@@ -8,13 +8,13 @@ Activate conda environment with `conda activate djangoenv`
 `python manage.py runserver localhost:10077` - **To run on mac1xa3.ca server**
 
 ## Users Created:
-#. | Username  | Password
---- | --- | ---
-1. | TestUser1 | project031xa3
-2. | TestUser2 | project031xa3
-3. | TestUser3 | project031xa3
-4. | TestUser4 | project031xa3
-5. | TestUser5 | project031xa3
+| #. | Username  | Password |
+| --- | --- | --- |
+| 1. | TestUser1 | project031xa3 |
+| 2. | TestUser2 | project031xa3 |
+| 3. | TestUser3 | project031xa3 |
+| 4. | TestUser4 | project031xa3 |
+| 5. | TestUser5 | project031xa3 |
 
 ## Objectives:
 ***General Exception:*** If the user logs in with *incorrect username/password*, the page redirects again to the login page ***(e/paarthas/)***.

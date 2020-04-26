@@ -1,3 +1,4 @@
+
 from django.http import HttpResponse,HttpResponseNotFound
 from django.shortcuts import render,redirect
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, PasswordChangeForm
@@ -60,10 +61,26 @@ def signup_view(request):
     -------
       out : (HttpRepsonse) - renders signup.djhtml
     """
-    form = None
+    form = UserCreationForm()
+    failed = request.session.get('signup_failed',False)
 
     # TODO Objective 1: implement signup view
 
-    context = { 'signup_form' : form }
+    context = { 'signup_form' : form
+                 ,'signup_failed' : failed }
 
     return render(request,'signup.djhtml',context)
+
+def user_signup_view(request):
+  if request.method == 'POST':
+      form = UserCreationForm(request.POST)
+      if form.is_valid():
+          username = form.cleaned_data.get('username')
+          raw_password = form.cleaned_data.get('password1')
+          models.UserInfo.objects.create_user_info(username=username, password=raw_password)
+          user = authenticate(username=username, password=raw_password)
+          login(request, user)
+          return redirect('social:messages_view')
+
+  request.session['signup_failed'] = True
+  return redirect('login:signup_view')

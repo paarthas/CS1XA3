@@ -1,4 +1,3 @@
-
 from django.http import HttpResponse,HttpResponseNotFound
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, PasswordChangeForm
@@ -61,7 +60,7 @@ def account_view(request):
         user_info = models.UserInfo.objects.get(user=request.user)
         employment = user_info.employment
         location = user_info.location
-        birthday = user_info.birthday
+        #birthday  = user_info.birthday
 
         if request.method == 'POST':
 
@@ -79,15 +78,18 @@ def account_view(request):
             if models.Interest.objects.filter(label__iexact=intst):
                 instance = models.Interest.objects.filter(label__iexact=intst)
             else:
+      
                 instance = models.Interest.objects.create(label=intst)
             user_info.interests.add(instance)
+
+
+
             user_info.save()
         user_info = models.UserInfo.objects.get(user=request.user)
-
         if user_info.birthday is not None:
-               birth= datetime.strftime(user_info.birthday, '%Y-%m-%d')
+            birth= datetime.strftime(user_info.birthday, '%Y-%m-%d')
         else:
-               birth=birthday
+            birth=None
 
         if form.is_valid():
             user = form.save()
@@ -170,11 +172,11 @@ def like_view(request):
     if postIDReq is not None:
         # remove 'post-' from postID and convert to int
         # TODO Objective 10: parse post id from postIDReq
-        postID = int(postIDReq[5:])
+        postID = 0
 
         if request.user.is_authenticated:
             # TODO Objective 10: update Post model entry to add user to likes field
-            request.session['like'] = request.session.get('like', 0)
+
             # return status='success'
             return HttpResponse()
         else:
